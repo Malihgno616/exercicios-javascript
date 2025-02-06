@@ -26,6 +26,9 @@
         border-radius: 5px;
         cursor: pointer;
       }
+      #spc {
+        margin-bottom: 1rem;
+      }
       #spc p {
         background-color: #f0f0f0;
         padding: 10px;
@@ -43,20 +46,31 @@
     <h1>Quem sou eu?</h1>
     <button id="show-text">Quem sou eu?</button>
     <div id="spc"></div>
+
     <script>
       const spc = document.getElementById("spc");
       const txt = document.createElement("p");
+      const infos = document.createElement("p");
+
+      infos.style.textAlign = "justify";
+      infos.innerHTML =
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure harum porro commodi expedita cumque voluptates mollitia incidunt doloribus accusamus quam natus dolor saepe pariatur dicta, velit quia veritatis quidem maiores!";
+
       txt.style.textAlign = "center";
       txt.classList.add("animate__animated", "animate__backInLeft");
+      infos.classList.add("animate__animated", "animate__backInLeft");
       document
         .getElementById("show-text")
         .addEventListener("click", function () {
           txt.innerHTML =
             "Ola, me chamo Ackin e sou desenvolvedor fullstack com php e javascript";
-          if (!spc.contains(txt)) {
+          if (!spc.contains(txt) && !spc.contains(infos)) {
             spc.appendChild(txt);
+            document.createElement("br");
+            spc.appendChild(infos);
           } else {
             spc.removeChild(txt);
+            spc.removeChild(infos);
           }
         });
     </script>
