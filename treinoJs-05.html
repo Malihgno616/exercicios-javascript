@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exibindo informações com o botão</title>
+  </head>
+  <body>
+    <h1>Randomicamente Random</h1>
+
+    <h2>Olá</h2>
+
+    <button id="btn">Clique aqui</button>
+    <div id="infos"></div>
+    <script>
+      const btn = document.getElementById("btn");
+      let clickCount = 0;
+
+      btn.addEventListener("click", function () {
+        clickCount++;
+        const nome = "João da Silva";
+        const text = document.createElement("p");
+        const espace = document.getElementById("infos");
+
+        text.innerHTML = `meu nome é ${nome}`;
+
+        espace.appendChild(text);
+
+        if (clickCount >= 10) {
+          alert("Você clicou 10 vezes");
+        }
+      });
+    </script>
+  </body>
+</html>

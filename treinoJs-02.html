@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript DOM</title>
+  </head>
+  <body>
+    <h1>Alterando valores com um botão</h1>
+    <button id="botao">Clique aqui</button>
+    <button id="botao2">Clique aqui</button>
+    <p id="paragrafo">Este é um parágrafo</p>
+    <script>
+      document.getElementById("botao2").onclick = function () {
+        if (document.getElementById("botao2").click) {
+          document.getElementById("paragrafo").innerHTML =
+            "Este é um parágrafo";
+          document.getElementById("paragrafo").style.color = "black";
+        }
+      };
+      document.getElementById("botao").onclick = function () {
+        if (document.getElementById("botao").click) {
+          document.getElementById("paragrafo").innerHTML =
+            "Este parágrafo foi alterado para a cor azul";
+          document.getElementById("paragrafo").style.color = "blue";
+        }
+      };
+    </script>
+  </body>
+</html>

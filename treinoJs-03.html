@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos HTML com JS DOM</title>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      button {
+        margin: 10px auto;
+        display: block;
+      }
+      body {
+        font-family: Arial, sans-serif;
+      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        gap: 1rem;
+        padding: 2rem;
+      }
+      div p {
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.445);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Praticando elementos html com js</h1>
+    <button id="btn">Clique Aqui para adicionar elementos</button>
+    <button id="btn-remove">Cliqui Aqui para remover todos os elementos</button>
+    <div id="espaco"></div>
+    <script>
+      const btnRemove = document.getElementById("btn-remove");
+      const btn = document.getElementById("btn");
+      const espaco = document.getElementById("espaco");
+
+      btnRemove.onclick = function () {
+        espaco.innerHTML = "";
+      };
+
+      btn.onclick = function () {
+        const novoParagrafo = document.createElement("p");
+        novoParagrafo.innerHTML = "Este é um novo parágrafo.";
+        espaco.appendChild(novoParagrafo);
+      };
+    </script>
+  </body>
+</html>

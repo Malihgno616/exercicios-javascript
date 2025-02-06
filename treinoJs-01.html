@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM JAVASCRIPT</title>
+  </head>
+  <body>
+    <h1>Texto com js</h1>
+    
+    <p id="texto"></p>
+    <script>
+      const texto =
+        "TEXTO DA SILVA Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat at alias repellendus. Unde animi provident accusantium, nostrum dicta deserunt inventore laudantium! Voluptas aperiam facilis quos maiores amet molestiae libero excepturi!";
+      const cor = "blue";
+      const fonteTamanho = "1.25rem";
+      const formatoTexto = "justify";
+      const larguraTexto = "400px";
+
+      document.getElementById("texto").innerHTML = texto;
+      document.getElementById("texto").style.color = cor;
+      document.getElementById("texto").style.fontSize = fonteTamanho;
+      document.getElementById("texto").style.textAlign = formatoTexto;
+      document.getElementById("texto").style.width = larguraTexto;
+    </script>
+  </body>
+</html>
